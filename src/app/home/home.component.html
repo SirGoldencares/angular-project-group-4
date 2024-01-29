@@ -1,0 +1,25 @@
+<app-nav></app-nav>
+<div class="mt-5" id="home">
+    <section id="hero">
+        <div class="hero-image">
+            <img src="assets/Robot.jpg" alt="fugot" />
+        </div>
+        <div class="hero-word">
+            <h4>HELLO I AM</h4>
+            <h2>MR. ROBOT</h2>
+            <h5>SOFTWARE ENGINEER</h5>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugit quidem nobis quibusdam sequi, ea obcaecati consequatur autem, repellat praesentium hic dignissimos a iste numquam labore.</p>
+            <p class="hire">Hire me <i class="fa-solid fa-arrow-right"></i></p>
+        </div>
+    </section>
+    <section id="course">
+        <h4 class="mb-4">FOCUS AREAS</h4>
+        <div class="course-cards">
+            <div *ngFor="let course of courses" class="card">
+                <i class="fa-solid {{course.svg}}"></i>
+                <h6>{{course.title}}</h6>
+                <p>{{course.content}}</p>
+            </div>
+        </div>
+    </section>
+</div>
