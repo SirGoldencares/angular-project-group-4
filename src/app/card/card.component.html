@@ -9,7 +9,7 @@
                 <p>{{ user.email }}</p>
             </div>
         </div>
-        <button>View Details</button>
-
+        <button [routerLink]="['/users', user.id]">View Details</button>
     </div>
+
 </div>
