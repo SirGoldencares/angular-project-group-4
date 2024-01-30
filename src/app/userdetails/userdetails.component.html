@@ -1,21 +1,53 @@
 <app-nav>
 </app-nav>
-<div class="profile-container">
-    <div class="cover-photo">
-        <img src="assets/Header.jpeg" alt="cover photo">
-    </div>
-    <div class="profile-picture">
-        <img src="https://robohash.org/{{user?.username}}?size=200x200&set=set3" alt="Profile Picture ">
-    </div>
-    <!-- Other profile information and content go here -->
-</div>
-<div id="user-details ">
-    <div class="first-user ">
+<div id="user-preview">
+    <div class="profile-container">
+        <div class="cover-photo">
+            <img src="assets/earth.jpg" alt="cover photo">
+        </div>
+        <div class="profile-picture">
+            <img src="https://robohash.org/{{user?.username}}?size=200x200&set=set3" alt="Profile Picture ">
+        </div>
 
     </div>
-    <div *ngIf="user ">
-        <h2>User Details</h2>
-        <p>Name: {{ user.name }}</p>
-        <p>Email: {{ user.email }}</p>
+    <div *ngIf="user " id="user-details">
+        <div class="robot-details">
+            <div class="user-robot">
+                <h5>{{ user.name }}</h5>
+                <p>Username : {{ user.username }}</p>
+                <p><i class="fa-solid fa-link"></i> {{ user.website }}</p>
+            </div>
+            <div class="comp-details">
+                <h6 class="mb-4">Company</h6>
+                <div class="comp">
+                    <div class="comp-img"><img src="assets/company.jpg" alt=""></div>
+                    <div class="comp-word px-2">
+                        <p class="fw-bolder">{{ user.company.name }}</p>
+                        <p><em>{{ user.company.catchPhrase }}</em></p>
+                        <p>Senior Software Engineer</p>
+                    </div>
+                </div>
+                <p class="mt-4 fw-bolder">About Company</p>
+                <p class="me-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Non nihil consectetur rerum amet tempore nam cum, quidem, provident ratione officia pariatur deleniti velit consequuntur? Neque blanditiis quod ducimus totam corrupti reprehenderit
+                    nulla, consequatur praesentium pariatur, nostrum qui culpa vel officia?</p>
+            </div>
+        </div>
+        <div class="other-details">
+            <div class="about">
+                <h6>About</h6>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi in molestiae delectus amet ad recusandae quod dolores, quia dolor, hic repellat quidem rem? Quod cumque, aperiam reprehenderit nulla nisi nesciunt commodi animi est. Suscipit
+                    doloribus ullam possimus libero aliquam molestiae? Iure incidunt soluta officia modi culpa laboriosam eligendi a ea!</p>
+            </div>
+            <div class="contact">
+                <h6>Contact Info</h6>
+                <p> {{ user.address.street }}, {{ user.address.suite }}, <br/> {{ user.address.city }}, {{ user.address.zipcode }}
+                </p>
+                <p> {{ user.email }}
+                </p>
+                <p> {{ user.phone }}
+                </p>
+            </div>
+        </div>
+
     </div>
 </div>
