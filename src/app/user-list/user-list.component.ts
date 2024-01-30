@@ -1,7 +1,9 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { NavComponent } from '../nav/nav.component';
 import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
 
 @Component({
   selector: 'app-user-list',
@@ -11,5 +13,7 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './user-list.component.css'
 })
 export class UserListComponent {
+  
 
+  
 }

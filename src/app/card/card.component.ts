@@ -1,11 +1,11 @@
 import { Component,OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterOutlet, RouterModule } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { UserService } from '../service/user.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { User } from '../models/user';
-import { RouterModule } from '@angular/router';
+
 
 
 
@@ -19,9 +19,7 @@ import { RouterModule } from '@angular/router';
 })
 export class CardComponent implements OnInit{
   users:User[] =[];
-
  
-
   constructor (private userService:UserService){};
 
   ngOnInit():void{
