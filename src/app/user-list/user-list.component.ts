@@ -5,6 +5,7 @@ import { NavComponent } from '../nav/nav.component';
 import { CardComponent } from '../card/card.component';
 import { FormsModule } from '@angular/forms';
 
+
 @Component({
   selector: 'app-user-list',
   templateUrl: './user-list.component.html',
@@ -16,6 +17,7 @@ export class UserListComponent implements OnInit {
   users: User[] = [];
   filteredUsers: User[] = [];
   filterOptions = { name: true, email: true };
+ 
 
   constructor(private userService: UserService) {}
 
@@ -37,5 +39,9 @@ export class UserListComponent implements OnInit {
              (this.filterOptions.email && user.email.toLowerCase().includes(searchTerm));
     });
   }
+
+ filterToggle(){
+  document.querySelector('.dropdown-content')?.classList.toggle('show')
+ }
   
 }

@@ -7,6 +7,7 @@ import { FormsModule } from '@angular/forms';
 import { NavigationService } from '../service/navigation.service';
 import { RouterOutlet } from '@angular/router';
 
+
 @Component({
   selector: 'app-home',
   standalone: true,

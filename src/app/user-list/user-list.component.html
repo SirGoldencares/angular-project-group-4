@@ -3,18 +3,16 @@
     <h2>User List</h2>
     <div class="search">
         <input type="text" placeholder="Search Users" id="user" name="user" (input)="search()">
-        <div class="dropdown">
-            <i class="fa-solid fa-sliders"></i>
-            <div class="dropdown-content">
-                <label>
-                    <input type="checkbox" [(ngModel)]="filterOptions.name" (change)="applyFilter()"> Name
-                </label>
-                <label>
-                    <input type="checkbox" [(ngModel)]="filterOptions.email" (change)="applyFilter()"> Email
-                </label>
-            </div>
+        <i class="fa-solid fa-sliders" (click)="filterToggle()"></i>
+        <div class="dropdown-content">
+            <label for="name">
+            <input id="name" type="checkbox" [(ngModel)]="filterOptions.name" (change)="applyFilter()" unchecked>Name
+        </label>
+            <label for="email">
+            <input id="email" type="checkbox" [(ngModel)]="filterOptions.email" (change)="applyFilter()">Email
+        </label>
         </div>
-        </div>
+    </div>
     <app-card [users]="filteredUsers">
     </app-card>
 </div>
