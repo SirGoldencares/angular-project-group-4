@@ -1,35 +1,41 @@
 import { Component, OnInit } from '@angular/core';
-import { CardComponent } from '../card/card.component';
-import { NavComponent } from '../nav/nav.component';
-import { RouterOutlet } from '@angular/router';
 import { UserService } from '../service/user.service';
 import { User } from '../models/user';
+import { NavComponent } from '../nav/nav.component';
+import { CardComponent } from '../card/card.component';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-user-list',
-  standalone: true,
-  imports: [CardComponent, NavComponent, RouterOutlet],
   templateUrl: './user-list.component.html',
-  styleUrl: './user-list.component.css'
+  styleUrls: ['./user-list.component.css'],
+  standalone: true,
+  imports: [NavComponent, FormsModule, CardComponent]
 })
 export class UserListComponent implements OnInit {
   users: User[] = [];
   filteredUsers: User[] = [];
+  filterOptions = { name: true, email: true };
 
-  constructor(private userService: UserService) {  }
+  constructor(private userService: UserService) {}
 
   ngOnInit() {
     this.userService.getUsers().subscribe(users => {
       this.users = users;
-      this.filteredUsers = users; // Update filteredUsers here
+      this.filteredUsers = this.users;
     });
   }
 
-  search(event: any) {
-    const searchTerm = event.target.value.toLowerCase();
-    this.filteredUsers = this.users.filter((user) => {
-      return user.name.toLowerCase().includes(searchTerm) ||
-             user.email.toLowerCase().includes(searchTerm);
+  search() {
+    this.applyFilter();
+  }
+
+  applyFilter() {
+    const searchTerm = (document.getElementById('user') as HTMLInputElement).value.toLowerCase();
+    this.filteredUsers = this.users.filter(user => {
+      return (this.filterOptions.name && user.name.toLowerCase().includes(searchTerm)) ||
+             (this.filterOptions.email && user.email.toLowerCase().includes(searchTerm));
     });
   }
+  
 }

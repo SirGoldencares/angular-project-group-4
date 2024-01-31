@@ -10,6 +10,8 @@
 .search {
     margin-top: 0px;
     margin-bottom: 20px;
+    display: flex;
+    align-items: start;
 }
 
 .search input {

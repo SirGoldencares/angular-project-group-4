@@ -2,8 +2,19 @@
 <div class="user-list mt-3">
     <h2>User List</h2>
     <div class="search">
-        <input type="text" placeholder="Search Users" id="user" name="user" (input)="search($event)">
-        <i class="fa-solid fa-sliders"></i></div>
+        <input type="text" placeholder="Search Users" id="user" name="user" (input)="search()">
+        <div class="dropdown">
+            <i class="fa-solid fa-sliders"></i>
+            <div class="dropdown-content">
+                <label>
+                    <input type="checkbox" [(ngModel)]="filterOptions.name" (change)="applyFilter()"> Name
+                </label>
+                <label>
+                    <input type="checkbox" [(ngModel)]="filterOptions.email" (change)="applyFilter()"> Email
+                </label>
+            </div>
+        </div>
+        </div>
     <app-card [users]="filteredUsers">
     </app-card>
 </div>
