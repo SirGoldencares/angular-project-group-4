@@ -6,8 +6,6 @@ import { User } from '../models/user';
 
 
 
-
-
 @Component({
   selector: 'app-card',
   standalone: true,

@@ -6,6 +6,7 @@
         font-family: "Roboto", sans-serif;
         font-weight: 400;
         font-style: normal;
+        padding-bottom: 50px;
     }
     
     .card {
@@ -82,13 +83,94 @@
     }
     
     @media screen and (max-width: 1000px) {
-        .new-image {
-            width: 90%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
+        .card-prev-word h4 {
+            font-size: 0.9em;
         }
-        .new-image img {
-            width: 180px;
-            height: 200px;
+        .card-prev-img img {
+            width: 60px;
+        }
+        .card-prev-word p {
+            margin-top: 2px;
+            font-size: 0.7em;
+        }
+        button {
+            font-size: 0.6em !important;
+        }
+    }
+    
+    @media screen and (max-width: 820px) {
+        #card-component {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 0 auto;
+            grid-gap: 30px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card-prev-word h4 {
+            font-size: 0.8em;
+        }
+        .card-prev-word p {
+            font-size: 0.6em;
+        }
+        button {
+            font-size: 0.55em !important;
+        }
+    }
+    
+    @media screen and (max-width: 500px) {
+        #card-component {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            margin: 0 auto;
+            grid-gap: 30px;
+            font-family: "Roboto", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card-prev {
+            display: flex;
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        .card-prev-img img {
+            width: 120px;
+        }
+        .card-prev-word {
+            padding-left: 10px;
+            padding-top: 30px;
+        }
+        .card-prev-word h4 {
+            font-size: 1.1em;
+        }
+        .card-prev-word p {
+            font-size: 0.9em;
+        }
+        button {
+            font-size: 0.9em !important;
+            margin: 0 auto;
+            margin-bottom: 60px;
+        }
+    }
+    
+    @media screen and (max-width: 395px) {
+        .card-prev-img img {
+            width: 80px;
+        }
+        .card-prev-word {
+            padding-left: 10px;
+            padding-top: 30px;
+        }
+        .card-prev-word h4 {
+            font-size: 0.95em;
+        }
+        .card-prev-word p {
+            font-size: 0.7em;
+        }
+        button {
+            font-size: 0.8em !important;
         }
     }

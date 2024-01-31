@@ -94,3 +94,71 @@
                 .contact {
                     padding-top: 40px;
                 }
+                
+                @media screen and (max-width: 720px) {
+                    .profile-picture {
+                        position: absolute;
+                        top: 140px;
+                        left: 50px;
+                        z-index: 2;
+                        border: 5px solid rgb(9, 61, 129);
+                        border-radius: 50%;
+                        background: rgb(164, 193, 221);
+                    }
+                    .user-robot {
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid rgb(218, 210, 210);
+                        padding-top: 80px;
+                        padding-left: 65px;
+                    }
+                    .profile-picture img {
+                        width: 120px;
+                        height: 120px;
+                        border-radius: 50%;
+                    }
+                }
+                
+                @media screen and (max-width: 550px) {
+                    #user-details {
+                        margin: 0 auto;
+                        display: grid;
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    .profile-picture {
+                        position: absolute;
+                        top: 90px;
+                        left: 30%;
+                        z-index: 2;
+                        border: 5px solid rgb(9, 61, 129);
+                        border-radius: 50%;
+                        background: rgb(164, 193, 221);
+                    }
+                    .profile-picture img {
+                        width: 180px;
+                        height: 180px;
+                        border-radius: 50%;
+                    }
+                    .user-robot {
+                        padding-bottom: 30px;
+                        border-bottom: 1px solid rgb(218, 210, 210);
+                        padding-top: 100px;
+                        padding-left: 180px;
+                    }
+                    .comp-details {
+                        padding-top: 20px;
+                        padding-left: 30px;
+                    }
+                    .robot-details {
+                        padding-bottom: 30px;
+                    }
+                    .other-details {
+                        padding-top: 20px;
+                    }
+                    .about {
+                        width: 90%;
+                    }
+                    .contact {
+                        padding-top: 20px;
+                        padding-bottom: 30px;
+                    }
+                }
