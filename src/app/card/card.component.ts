@@ -5,11 +5,11 @@ import { FormsModule } from '@angular/forms';
 import { User } from '../models/user';
 
 
-
+// Component decorator for the card component
 @Component({
   selector: 'app-card',
-  standalone: true,
-  imports: [RouterOutlet, CommonModule, FormsModule, RouterModule],
+  standalone: true, // Indicates that this component can function independently
+  imports: [RouterOutlet, CommonModule, FormsModule, RouterModule], //Imports modules
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
