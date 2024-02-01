@@ -1,0 +1,22 @@
+<app-nav></app-nav>
+<div class="user-list mt-3">
+    <h2>User List</h2>
+    <div class="search">
+        <input type="text" placeholder="Search Users" id="user" name="user" (input)="search()">
+        <i class="fa-solid fa-sliders" (click)="filterToggle()"></i>
+        <div class="dropdown-content">
+            <label for="name">
+            <input id="name" type="checkbox" [(ngModel)]="filterOptions.name" (change)="applyFilter()" unchecked>Name
+        </label>
+            <label for="email">
+            <input id="email" type="checkbox" [(ngModel)]="filterOptions.email" (change)="applyFilter()">Email
+        </label>
+        </div>
+    </div>
+    @if (filteredUsers.length != 0) {
+        <app-card [users]="filteredUsers">
+        </app-card>
+    } @else {
+        <h1 class="m-5">Users not found under the current filter criteria <i class="fa-solid fa-face-sad-tear" style="color: yellow;"></i></h1>
+    }    
+</div>

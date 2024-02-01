@@ -1,0 +1,19 @@
+        .navbar {
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+            box-shadow: rgba(94, 90, 90, 0.35) 0px 3px 5px;
+        }
+        
+        .navbar:hover {
+            cursor: pointer;
+        }
+        
+        .navbar-brand {
+            font-weight: 600;
+        }
+        
+        a:hover {
+            color: rgb(9, 61, 129);
+            cursor: pointer;
+        }
