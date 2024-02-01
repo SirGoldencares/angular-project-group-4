@@ -58,6 +58,13 @@
     .show {
         display: inline;
     }
+    h1 i{
+        background: white;
+    }
+    h1{
+        padding-top: 15%;
+        text-align: center;
+    }
     
     @media screen and (max-width: 500px) {
         .search input {

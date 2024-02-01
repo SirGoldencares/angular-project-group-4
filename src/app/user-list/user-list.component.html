@@ -13,6 +13,10 @@
         </label>
         </div>
     </div>
-    <app-card [users]="filteredUsers">
-    </app-card>
+    @if (filteredUsers.length != 0) {
+        <app-card [users]="filteredUsers">
+        </app-card>
+    } @else {
+        <h1 class="m-5">Users not found under the current filter criteria <i class="fa-solid fa-face-sad-tear" style="color: yellow;"></i></h1>
+    }    
 </div>
