@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NavComponent } from '../nav/nav.component';
-import { ICourses } from '../models/courses/courses';
-import { COURSES } from '../../coursesdata';
+import { COMPETENCIES } from '../../competencies';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavigationService } from '../service/navigation.service';
@@ -17,7 +16,7 @@ import { RouterOutlet } from '@angular/router';
 })
 export class HomeComponent {
   constructor(private navigationService: NavigationService) {}
-  courses: ICourses[] = COURSES;
+  courses: any[] = COMPETENCIES;
 
   navigateToUsers(event: Event) {
     event.preventDefault();

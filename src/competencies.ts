@@ -1,6 +1,5 @@
-import { ICourses } from "./app/models/courses/courses";
-
-export const COURSES: any = [
+//A list of the competencies of the robot engineers
+export const COMPETENCIES: any = [
   {
     id: 1,
     svg: 'fa-gear',

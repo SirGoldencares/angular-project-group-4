@@ -13,6 +13,8 @@ import { User } from '../models/user';
   templateUrl: './card.component.html',
   styleUrl: './card.component.css'
 })
+
+//Receives the data from its parent component and renders it
 export class CardComponent{
   @Input() users:User[] = [];
 }
